@@ -10,11 +10,10 @@ title: HISTORICKÝ VÝVOJ CEN
 
   <div style="text-align: center;">
     <a class="display-12" style="padding:5px 25px;">6:00 AM</a>
-    <a class="display-12" style="padding:5px 25px;">BITCOIN</a>
-    <a class="display-12" style="padding:5px 25px;">ETHEREUM</a>
-    <a class="display-12" style="padding:5px 25px;">LITECOIN</a>
-    <a class="display-12" style="padding:5px 25px;">MONERO</a>
-    <a class="display-12" style="padding:5px 25px;">CZK</a>
+    <a class="display-12" style="padding:5px 25px;">Bitcoin</a>
+    <a class="display-12" style="padding:5px 25px;">Ethereum</a>
+    <a class="display-12" style="padding:5px 25px;">Litecoin</a>
+    <a class="display-12" style="padding:5px 25px;">Monero</a>
   </div>
 <br>
 
