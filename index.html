@@ -1,28 +1,44 @@
 ---
 layout: default
-title: ColorchainCZ
+title: Colorchain
 
 ---
 {% assign date = site.data.usd_historic_data[0] %}
-<h1 class="project-price">Rates for {{ date.first[1] }} </h1>
-<ul class="projects clearfix">
 {% assign row = site.data.usd_data[0] %}
-{% for pair in row %}
-  <li>
-    <div class="project">
-      <div class="project-details">
-        <h1 class="project-price">$ {{ pair [1] }} </h1>
-      </div>
-      <span class="crypto-icon"> 
-        <h2 class="crypto-price" style="padding-left: 12%"> {{ pair [0] }}  </h2>
-        <img class="github-icon crypto-icon" src="img/thumbs/{{ pair[0] }}.png" />
-      </span>
-    </div>
-  </li>
-{% endfor %}
-</ul>
 
-<h1 class="project-price">Live Rates</h1>
+<main class="container">
+  <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+    <h1 class="display-4">Rates for date:</h1>
+    <p class="lead">{{ date.first[1] }} - 6:00 AM</p>
+  </div>
+
+  <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
+
+  {% for pair in row %}
+
+    <div class="col">
+      <div class="card mb-4 shadow-sm">
+
+      <div class="card-header">
+        <img class="fa fa-icon" style="width:1.5rem; height:1.5rem;" src="assets/img/{{ pair[0] }}.png" /></img>
+        <h4 class="my-0 fw-normal"> {{ pair[0] }} </h4>
+      </div>
+
+      <div class="card-body bg-dark">
+        <h3 class="card-title pricing-card-title" style="color:#fff;">$</h3>
+        <h1 class="card-title pricing-card-title" style="color:#fff;">{{ pair[1] }}</h1>
+      </div>
+
+    </div>
+    </div>
+
+  {% endfor %}
+  </div>
+
+
+<div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+  <h1 class="display-4">Live Rates</h1>
+</div>
 
 <div class="tradingview-widget-container">
   <div class="tradingview-widget-container__widget"></div>
@@ -117,3 +133,5 @@ title: ColorchainCZ
   );
   </script>
 </div>
+
+</main>

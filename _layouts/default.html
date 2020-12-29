@@ -1,86 +1,13 @@
-<!doctype html>
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>{{ page.title }} | {{ site.name }}</title>
-  <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
-  <meta name="author" content="{{ site.author }}">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <link href="https://vjs.zencdn.net/5-unsafe/video-js.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/v4-shims.css">
-  <link rel="stylesheet" href="/all.css">
-  <link rel="stylesheet" href="/static/css/style.css">
-  <link href='http://fonts.googleapis.com/css?family=Open+Sans:600' rel='stylesheet' type='text/css'>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap"   rel="stylesheet">
-  <link rel="icon" href="/favicon.ico?v=2" type="image/x-icon" />
-  <script src="/static/js/modernizr-2.0.6.min.js"></script>
-</head>
-
-<body>
-  <header>
-    <div class="inner">
-      <h1 class="logo-icon"></h1>
-    </div>
-    <div class="inner">
-      <h1 class="site-title">
-        <a href="/">COLORCHAIN</a></h1>
-      <nav class="main-nav">
-        <ul>
-           <li>
-            <a href="/historical.html">Historical Data</a>
-          </li>
-           <li>
-            <a href="/about.html">About Us</a>
-          </li>
-        </ul>
-      </nav>
-      <nav class="icons-nav">
-        <ul>
-          <li class="fa-bg">
-            <a href="/historical.html" target="_blank"><i class="fa fa-large fa-bitcoin"> </i> HISTORICAL</a>
-          </li>
-        </ul>
-      </nav>
-      <nav class="mobile-nav">
-        <ul>
-          <li class="fa-bg">
-            <a href="/historical.html" target="_blank"><i class="fa fa-large fa-bitcoin"> </i> HISTORICAL</a>
-          </li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-
-  <div id="container" class="clearfix">
-    <div id="main" role="main" class="clearfix">
-
+<!DOCTYPE html>
+<html lang="en">
+  {% include header.html %}
+  <body>
+    {% include navbar.html %}
+    <div class="container">
       {{ content }}
-
     </div>
-    <footer style="margin:0">
-    <div class="ftitle">
-      <h1 class="footer-title" style="padding:2.2rem 2rem 2rem 2rem">
-        <a href="/">© 2020 Colorchain / All Rights Reserved</a>
-    </div>        
-    </footer>
-
-  </div> <!--! end of #container -->
-
-  <script src="/js/jquery-1.10.2.min.js"></script>
-  <script src="https://vjs.zencdn.net/7.2.4/video.js"></script>
-  <script defer src="{{ site.baseurl }}all.js"></script>
-  <script>
-    window._gaq = [['_setAccount','{{ site.analytics }}'],['_trackPageview'],['_trackPageLoadTime']];
-    Modernizr.load({
-      load: ('https:' == location.protocol ? '//ssl' : '//www') + '.google-analytics.com/ga.js'
-    });
-  </script>
-
-  <!--[if lt IE 7 ]>
-    <script src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.3/CFInstall.min.js"></script>
-    <script>window.attachEvent('onload',function(){CFInstall.check({mode:'overlay'})})</script>
-  <![endif]-->
-
-</body>
+    {% include footer.html %}
+    <script src="/js/jquery-3.3.1.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+  </body>
 </html>
