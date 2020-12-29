@@ -1,0 +1,23 @@
+---
+layout: default
+title: HISTORICKÝ VÝVOJ CEN
+---
+<div class="static-page">
+
+  {% for row in site.data.usd_historic_data %}
+    {% if forloop.first %}
+    <div class="project clearfix">
+      {% for pair in row %}
+        <span class="history-price">{{ pair[0] }}</span>
+      {% endfor %}
+    </div>
+    {% endif %}
+
+    <div>
+      {% tablerow pair in row %}
+        <span class="history-price">{{ pair[1] }}</span>
+      {% endtablerow %}
+    </div>
+  {% endfor %}
+
+</div>

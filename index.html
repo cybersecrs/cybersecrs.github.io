@@ -1,0 +1,119 @@
+---
+layout: default
+title: Portfolio
+
+---
+{% assign date = site.data.usd_historic_data[0] %}
+<h1 class="project-price">Rates for {{ date.first[1] }} </h1>
+<ul class="projects clearfix">
+{% assign row = site.data.usd_data[0] %}
+{% for pair in row %}
+  <li>
+    <div class="project">
+      <div class="project-details">
+        <h1 class="project-price">$ {{ pair [1] }} </h1>
+      </div>
+      <span class="crypto-icon"> 
+        <h2 class="crypto-price" style="padding-left: 12%"> {{ pair [0] }}  </h2>
+        <img class="github-icon crypto-icon" src="img/thumbs/{{ pair[0] }}.png" />
+      </span>
+    </div>
+  </li>
+{% endfor %}
+</ul>
+
+<h1 class="project-price">Live Rates</h1>
+
+<div class="tradingview-widget-container">
+  <div class="tradingview-widget-container__widget"></div>
+  <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/symbols/KRAKEN-BTCUSD/" rel="noopener" target="_blank"></a></div>
+  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-single-quote.js" async>
+  {
+  "symbol": "KRAKEN:BTCUSD",
+  "width": "100%",
+  "colorTheme": "dark",
+  "isTransparent": false,
+  "locale": "en"
+}
+  </script>
+</div>
+
+<div class="tradingview-widget-container">
+  <div class="tradingview-widget-container__widget"></div>
+  <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/symbols/KRAKEN-ETHUSD/" rel="noopener" target="_blank"></a></div>
+  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-single-quote.js" async>
+  {
+  "symbol": "KRAKEN:ETHUSD",
+  "width": "100%",
+  "colorTheme": "dark",
+  "isTransparent": false,
+  "locale": "en"
+}
+  </script>
+</div>
+
+<div class="tradingview-widget-container">
+  <div class="tradingview-widget-container__widget"></div>
+  <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/symbols/KRAKEN-LTCUSD/" rel="noopener" target="_blank"></a></div>
+  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-single-quote.js" async>
+  {
+  "symbol": "KRAKEN:LTCUSD",
+  "width": "100%",
+  "colorTheme": "dark",
+  "isTransparent": false,
+  "locale": "en"
+}
+  </script>
+</div>
+
+<div class="tradingview-widget-container">
+  <div class="tradingview-widget-container__widget"></div>
+  <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/symbols/KRAKEN-XMRUSD/" rel="noopener" target="_blank"></a></div>
+  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-single-quote.js" async>
+  {
+  "symbol": "KRAKEN:XMRUSD",
+  "width": "100%",
+  "colorTheme": "dark",
+  "isTransparent": false,
+  "locale": "en"
+}
+  </script>
+</div>
+
+<div class="tradingview-widget-container">
+  <div id="tv-medium-widget"></div>
+  <div class="tradingview-widget-copyright"><a href="https://www.tradingview.com/symbols/COINBASE-BTCUSD/" rel="noopener" target="_blank"></div>
+  <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+  <script type="text/javascript">
+  new TradingView.MediumWidget(
+  {
+  "container_id": "tv-medium-widget",
+  "symbols": [
+    [
+      "BTC",
+      "KRAKEN:BTCUSD|12m"
+    ],
+    [
+      "ETH",
+      "KRAKEN:ETHUSD|12m"
+    ],
+    [
+      "LTC",
+      "KRAKEN:LTCUSD|12m"
+    ],
+    [
+      "XMR",
+      "KRAKEN:XMRUSD|12m"
+    ]
+  ],
+  "greyText": "Quotes by",
+  "gridLineColor": "#e9e9ea",
+  "fontColor": "#83888D",
+  "underLineColor": "#dbeffb",
+  "trendLineColor": "#4bafe9",
+  "width": "100%",
+  "locale": "en"
+}
+  );
+  </script>
+</div>
