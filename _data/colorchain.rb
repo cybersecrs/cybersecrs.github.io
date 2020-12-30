@@ -6,7 +6,7 @@ require 'net/http'
 require 'nokogiri'
 
 
-# Get CZK for USD
+# Get CZK rate for USD (for historic_data)
 
 module CZK
 
@@ -31,7 +31,7 @@ module CZK
 end
 
 
-# Get History Crypto Data
+# Get History Crypto Data (USD_historic_data.csv)
 
 module ColorChain
 
@@ -98,7 +98,9 @@ module ColorChain
 
   def save_csv_output!
     create_csv_headers unless File.exist?(@table)
-    CSV.open(@table, 'ab') { |column| column << @coins_array }
+    insert_after_header( @table, 1 ) do |row|
+      row.puts Array(@coins_array).join(",")
+    end
   end
 
   def create_csv_headers
@@ -108,10 +110,24 @@ module ColorChain
     CSV.open(@table, "w" ) { |header| header << header_array }
   end
 
- end    # end of
+  def insert_after_header file, line_no
+    tmp_fn = "#{file}.tmp"
+    File.open( tmp_fn, 'w' ) do |outf|
+      line_ct = 0
+      IO.foreach(file) do |line|
+        outf.print line
+        yield(outf) if line_no == (line_ct += 1)
+      end
+    end
+    File.rename tmp_fn, file
+  end
 
 
-# Get data for main page
+ end    # end of historic::class
+
+
+
+# Get data for main page (USD_data.csv)
 
  class Data
 
