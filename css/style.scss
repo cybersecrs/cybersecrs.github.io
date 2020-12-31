@@ -6,5 +6,49 @@
 
 /* add additional CSS rules below */
 
-.bg-dark { background-color: #568DC5 !important }
-.card-body {bacground-color: #eee !important; border-radius: 0.2rem }
+  .bg-dark { 
+    background-color: #568DC5 !important;
+    padding-top: 1rem;
+  }
+
+  .card-body {
+    color: #fff;
+    font-weight: bold !important;
+    border-radius: 0.5rem 0.5rem 0 0;
+  }
+
+  .card-header {
+    border-radius: 0 0 0.5rem 0.5rem !important;
+  }
+
+  .navbar-logo { 
+    width: auto;
+    height: 3.2rem;
+    padding: 0.2rem;
+    border-radius: 0.5rem
+  }
+
+  .BTC {
+    width: 1.3rem;
+    height: 1.3rem;
+    padding: 0 1rem;
+  }
+
+  .ETH {
+    width: 1.3rem;
+    height: 1.3rem;
+    padding: 0 1rem;
+  }
+
+  .LTC {
+    width: 1.3rem;
+    height: 1.3rem;
+    padding: 0 1rem;
+  }
+
+  .XMR {
+    width: 1.3rem;
+    height: 1.3rem;
+    padding: 0 1rem;
+  }
+

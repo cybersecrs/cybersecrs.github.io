@@ -6,7 +6,7 @@ require 'net/http'
 require 'nokogiri'
 
 
-# Get CZK rate for USD (for historic_data)
+# Get CZK for USD
 
 module CZK
 
@@ -31,7 +31,7 @@ module CZK
 end
 
 
-# Get History Crypto Data (USD_historic_data.csv)
+# Get History Crypto Data
 
 module ColorChain
 
@@ -127,7 +127,7 @@ module ColorChain
 
 
 
-# Get data for main page (USD_data.csv)
+# Get data for main page
 
  class Data
 

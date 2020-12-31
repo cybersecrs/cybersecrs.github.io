@@ -1,38 +1,115 @@
----
-layout: default
-title: Colorchain
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
----
-{% assign date = site.data.usd_historic_data[0] %}
-{% assign row = site.data.usd_data[0] %}
+  <title>Colorchain</title>
+  <meta name="description" content="Colorchain Cryptocurrency Rates">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container">
+    <a class="navbar-brand navbar-logo" href="/" src="assets/img/logo.png"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="/historical.html">HISTORICKÝ VÝVOJ CEN</a>
+        </li>
+          <a class="nav-link" href="/">AKTUÁLNÍ CENY</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+    <div class="container">
+      
+
 
 
 <main class="container">
 
   <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
     <ph2 class="lead" style="font-weight: bold;">AKTUÁLNÍ KURZ</h2>
-    <p class="lead" style="margin:1rem 0;">Aktualizace cen probíhá každý den v {{ site.updated_at }} - {{ date.first[1] }}</p>
+    <p class="lead" style="margin:1rem 0;">Aktualizace cen probíhá každý den v 6:00AM - 31/12/2020</p>
   </div>
 
   <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
 
-  {% for pair in row %}
+  
 
     <div class="col">
       <div class="card mb-4 shadow-sm" style="border-radius: 0.5rem">
 
       <div class="card-body bg-dark">
-        <h2 class="card-title pricing-card-title" style="font-weight:bold;">{{ pair[1] }}</h2>
+        <h2 class="card-title pricing-card-title" style="font-weight:bold;">28686.91</h2>
       </div>
 
       <div class="card-header">
-        <img class="fa fa-icon " style="width:auto; height:1rem; padding: 0 0.3rem;" src="assets/img/{{ pair[0] }}.png" /> {{pair[0]}}</img>
+        <img class="fa fa-icon " style="width:auto; height:1rem; padding: 0 0.3rem;" src="assets/img/BTC.png" /> BTC</img>
       </div>
 
     </div>
     </div>
 
-  {% endfor %}
+  
+
+    <div class="col">
+      <div class="card mb-4 shadow-sm" style="border-radius: 0.5rem">
+
+      <div class="card-body bg-dark">
+        <h2 class="card-title pricing-card-title" style="font-weight:bold;">732.88</h2>
+      </div>
+
+      <div class="card-header">
+        <img class="fa fa-icon " style="width:auto; height:1rem; padding: 0 0.3rem;" src="assets/img/ETH.png" /> ETH</img>
+      </div>
+
+    </div>
+    </div>
+
+  
+
+    <div class="col">
+      <div class="card mb-4 shadow-sm" style="border-radius: 0.5rem">
+
+      <div class="card-body bg-dark">
+        <h2 class="card-title pricing-card-title" style="font-weight:bold;">124.39</h2>
+      </div>
+
+      <div class="card-header">
+        <img class="fa fa-icon " style="width:auto; height:1rem; padding: 0 0.3rem;" src="assets/img/LTC.png" /> LTC</img>
+      </div>
+
+    </div>
+    </div>
+
+  
+
+    <div class="col">
+      <div class="card mb-4 shadow-sm" style="border-radius: 0.5rem">
+
+      <div class="card-body bg-dark">
+        <h2 class="card-title pricing-card-title" style="font-weight:bold;">158.40912</h2>
+      </div>
+
+      <div class="card-header">
+        <img class="fa fa-icon " style="width:auto; height:1rem; padding: 0 0.3rem;" src="assets/img/XMR.png" /> XMR</img>
+      </div>
+
+    </div>
+    </div>
+
+  
   </div>
 </main>
 
@@ -226,3 +303,19 @@ title: Colorchain
 
 
 </div>
+
+    </div>
+    <script src="/js/jquery-3.3.1.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <footer class="py-4 bg-dark">
+  <div class="container">
+    <p class="m-0 text-center text-white">Copyright &copy; Colorchain</p>
+    <p class="m-0 text-center text-white">Colorchain a.s.</p>
+    <p class="m-0 text-center text-white">Podvinný mlýn 2126/1</p>
+    <p class="m-0 text-center text-white">190 00 Praha 9</p>
+    <p class="m-0 text-center text-white">IČ: 06444407</p>
+  </div>
+</footer>
+
+  </body>
+</html>
