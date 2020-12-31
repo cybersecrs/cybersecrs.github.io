@@ -11,6 +11,18 @@
     padding-top: 1rem;
   }
 
+  .nav-link { 
+    align-text: center !important;
+    color: #fff;
+    font-weight: bold;
+  }
+
+  .nav-link:hover { 
+    align-text: center !important;
+    color: #fff;
+    border-bottom: 2px;
+  }
+
   .card-body {
     color: #fff;
     font-weight: bold !important;
