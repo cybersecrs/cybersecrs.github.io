@@ -11,10 +11,18 @@
     padding-top: 1rem;
   }
 
+
   .nav-link { 
     align-text: center !important;
     color: #fff;
     font-weight: bold;
+  }
+
+  .nav-link-icon {
+    align-text: left !important;
+    color: #fff;
+    font-size: 2rem;
+    font-weight: 500;
   }
 
   .nav-link:hover { 
