@@ -18,6 +18,20 @@
     font-weight: bold;
   }
 
+  .nav-item { 
+    align-text: left !important;
+    color: #fff;
+    font-weight: bold;
+    padding-right: 0.3rem;
+  }
+
+  .nav-item:hover { 
+    align-text: center !important;
+    color: #fff;
+    border-color: transparent;
+    text-transform: none;
+  }
+
   .nav-link-icon {
     align-text: left !important;
     color: #fff;

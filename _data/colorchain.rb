@@ -72,6 +72,7 @@ module ColorChain
       @coins_array << price = data["RAW"][coin][@currency]["PRICE"].round(5)
       # remove line for no-terminal-output
       puts "[#{coin}]: #{price}"
+      get_all_coin_info(data, coin, @currency)
     end
     @coins_array << @czk
     save_csv_output!
@@ -88,6 +89,18 @@ module ColorChain
     else
       puts "Request faild #{@count} times."
     end
+  end
+
+  def get_all_coin_info(data, coin, currency)
+    @symbol = data["RAW"][coin][currency]["FROMSYMBOL"]
+    @price  = data["RAW"][coin][currency]["PRICE"].round(2)
+    @chg    = data["RAW"][coin][currency]["CHANGE24HOUR"].round(3)
+    @chgpct = data["RAW"][coin][currency]["CHANGEPCT24HOUR"].round(3)
+    @high   = data["RAW"][coin][currency]["HIGH24HOUR"].round(2)
+    @low    = data["RAW"][coin][currency]["LOW24HOUR"].round(2)
+
+    CSV.open("#{@symbol}.csv", "w") { |header| header << %w[PRICE 24h-HIGH 24h-LOW 24h-CHANGE 24h-%-CHANGE] }
+    CSV.open("#{@symbol}.csv", 'ab') { |row| row << [ @price, @high, @low, @chg, "#{@chgpct}%" ] }
   end
 
   def print_terminal_header

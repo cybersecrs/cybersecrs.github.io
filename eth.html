@@ -1,0 +1,38 @@
+---
+layout: default
+title: "ETH-USD"
+
+---
+
+{% assign row = site.data.ETH[0] %}
+
+
+<main class="container">
+
+  <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+    <img class="text-center" href="/" src="assets/img/logo.png" style="max-width:80%; padding:0 0 2rem 0;"></img>
+    <h2 class="display-6" style="font-weight: bold;">AKTUÁLNÍ KURZ v ETHEREUM</h2>
+    <p class="lead" style="padding-top:0.5rem;">Aktualizace cen probíhá každý den v {{ site.updated_at }}</p>
+  </div>
+
+  <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
+
+  {% for pair in row %}
+
+    <div class="col">
+      <div class="card mb-4 shadow-sm" style="border-radius: 0.5rem">
+
+      <div class="card-body bg-dark">
+        <h2 class="card-title pricing-card-title" style="font-weight:bold; font-size:2.5rem">{{ pair[1] }}</h2>
+      </div>
+
+      <div class="card-header">
+        <h2 class="display-6">{{pair[0]}}</h2>
+      </div>
+
+    </div>
+    </div>
+
+  {% endfor %}
+  </div>
+</main>
